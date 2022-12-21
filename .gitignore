@@ -10,6 +10,7 @@ lerna-debug.log*
 .env
 .firebase
 
+*.txt
 
 node_modules
 dist
