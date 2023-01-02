@@ -9,6 +9,7 @@ export default async function fetchGoogleSheets(setLoading) {
     'Donations',
     'Upcoming_Events',
     'Hours',
+    'Organization',
   ];
   let requests = [];
   sheetNames.forEach(buildRequests);

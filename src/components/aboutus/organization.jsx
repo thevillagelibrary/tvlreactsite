@@ -11,8 +11,15 @@ import {
 } from '@chakra-ui/react';
 import _Board2022 from '../../pictures/2022 Board.jpg';
 import { PageBodySideMenu } from '@/components';
+import getOrganization from '@/utils/getOrganization';
 
 export default function Organization({ name }) {
+  let organization = getOrganization();
+  console.log(
+    '🚀 ~ file: organization.jsx:18 ~ Organization ~ organization',
+    organization
+  );
+
   return (
     <PageBodySideMenu name={name}>
       <Text fontSize='1rem'>
@@ -41,94 +48,16 @@ export default function Organization({ name }) {
           fontFamily='Calibri'
           padding='0rem'>
           <Tbody>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                President
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                Sandy Cooper
-              </Td>
-            </Tr>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                VP Community Relations
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                Brenda Day
-              </Td>
-            </Tr>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                VP Operations
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                Ren&eacute;e Collins
-              </Td>
-            </Tr>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                Secretary
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                Jane Gilchrist
-              </Td>
-            </Tr>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                Treasurer
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                Joy Howard
-              </Td>
-            </Tr>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                Volunteer Coordinator
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                Louise McDonald
-              </Td>
-            </Tr>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                Public Information Officer
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                Nicole Tifverman
-              </Td>
-            </Tr>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                Training Manager
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                (vacant)
-              </Td>
-            </Tr>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                Youth Section Manager
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                Kathy Kahn
-              </Td>
-            </Tr>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                Collection Development
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                CeCe Coleman
-              </Td>
-            </Tr>
-            <Tr>
-              <Td borderBottom='none' padding='0rem'>
-                Finance
-              </Td>
-              <Td borderBottom='none' padding='0rem'>
-                Terry Kessler
-              </Td>
-            </Tr>
+            {organization.map((item, index) => (
+              <Tr key={index}>
+                <Td borderBottom='none' padding='0rem'>
+                  {item[1]}
+                </Td>
+                <Td borderBottom='none' padding='0rem'>
+                  {item[2]}
+                </Td>
+              </Tr>
+            ))}
           </Tbody>
         </Table>
       </Center>
