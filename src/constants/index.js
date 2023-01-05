@@ -13,6 +13,10 @@ export const pages = [
         path: 'aboutus/organization',
       },
       {
+        name: 'Mission Statement',
+        path: 'aboutus/missionstatement',
+      },
+      {
         name: 'Membership',
         path: 'aboutus/membership',
       },
@@ -120,6 +124,7 @@ export const bannerText = {
   Home: 'Welcome to Our Website',
   AboutUs: 'The Landings Village Library',
   Organization: 'Our Organization',
+  MissionStatement: 'Our Mission Statement',
   Membership: 'Membership',
   Collection: "Our Library's Collection",
   ChildrensProgram: 'The Children are Our Future',

@@ -5,7 +5,7 @@ import { PageBodySideMenu } from '@/components';
 import { get } from '@/utils/localStorage';
 import fetchGoogleSheets from '@/utils/fetchGoogleSheets';
 import sheetsDataStale from '@/utils/sheetsDataStale';
-import { Spinner }  from '@/components';
+import { Spinner } from '@/components';
 
 export default function GoogleSheetsData({ name }) {
   const [loading, setLoading] = useState(true);
@@ -131,13 +131,12 @@ export default function GoogleSheetsData({ name }) {
 
   return (
     <PageBodySideMenu name={name}>
-      {!(sheet[name].sheetNo === 4) && (
-        <Box width='35.75rem' textAlign='right'>
-          <Text fontSize='1rem' style={{ fontStyle: 'italic' }}>
-            {updated}
-          </Text>
-        </Box>
-      )}
+      <Box width='35.75rem' textAlign='right'>
+        <Text fontSize='1rem' style={{ fontStyle: 'italic' }}>
+          {updated}
+        </Text>
+      </Box>
+
       {sheet[name].sheetNo === 1 && (
         <Box width='35.75rem' textAlign='left'>
           <Text fontSize='1rem' fontWeight='bold'>
@@ -146,7 +145,7 @@ export default function GoogleSheetsData({ name }) {
           <br />
         </Box>
       )}
-      {sheet[name].sheetNo === 5 && (
+      {sheet[name].sheetNo === 4 && (
         <>
           <Heading
             margin='.0625rem 0 .0625rem 0'
@@ -158,11 +157,6 @@ export default function GoogleSheetsData({ name }) {
             fontStyle='italic'>
             We wish to thank those who have donated to the Library recently.
           </Heading>
-          <Box width='35.75rem' textAlign='center'>
-            <Text fontSize='1rem' style={{ fontWeight: 'bold' }}>
-              {updated}
-            </Text>
-          </Box>
         </>
       )}
       {tables}

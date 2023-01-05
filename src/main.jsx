@@ -17,6 +17,7 @@ import {
   Collection,
   Membership,
   Organization,
+  MissionStatement,
   GrabAndGo,
   NewsEvents,
   UpcomingEvents,
@@ -46,6 +47,10 @@ const router = createBrowserRouter(
       <Route
         element={<Organization name={'Organization'} />}
         path='aboutus/organization'
+      />
+      <Route
+        element={<MissionStatement name={'MissionStatement'} />}
+        path='aboutus/missionstatement'
       />
       <Route
         element={<Membership name={'Membership'} />}
