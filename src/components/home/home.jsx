@@ -68,7 +68,7 @@ export default function Home({ name }) {
         </Heading>
         <Link as={ReactLink} to='/aboutus/bookdonations'>
           <Text fontSize='1rem' color='#7283fe' textDecoration='underline'>
-            Small Donations (individual or one small bag or box): Wed. - Sat.,
+            Small Donations (individual or one small bag or box): Tues. - Sat.,
             10 a.m. to 5 p.m.
           </Text>
         </Link>

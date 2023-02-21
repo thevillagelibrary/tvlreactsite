@@ -12,7 +12,7 @@ export default function BookDonations({ name }) {
         ml='0.5rem'
         alignItems='left'>
         <Text fontSize='1rem'>
-          Small Donations (individual or one small bag or box): Wed. - Sat., 10
+          Small Donations (individual or one small bag or box): Tues. - Sat., 10
           a.m. to 5 p.m.
           <br />
           Large Donations: Sat., 10 a.m. to 12 noon
