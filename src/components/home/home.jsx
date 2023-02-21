@@ -21,7 +21,7 @@ import UpcomingEventsLinks from '@/components/Home/UpcomingEventsLinks';
 import fetchGoogleSheets from '@/utils/fetchGoogleSheets';
 import getHours from '@/utils/getHours';
 import sheetsDataStale from '@/utils/sheetsDataStale';
-import { Spinner }  from '@/components';
+import { Spinner } from '@/components';
 
 export default function Home({ name }) {
   const [loading, setLoading] = useState(true);
@@ -68,7 +68,18 @@ export default function Home({ name }) {
         </Heading>
         <Link as={ReactLink} to='/aboutus/bookdonations'>
           <Text fontSize='1rem' color='#7283fe' textDecoration='underline'>
-            Thurs., Fri., Sat., 10 a.m. to 12 p.m.
+            Small Donations (individual or one small bag or box): Wed. - Sat.,
+            10 a.m. to 5 p.m.
+          </Text>
+        </Link>
+        <Link as={ReactLink} to='/aboutus/bookdonations'>
+          <Text fontSize='1rem' color='#7283fe' textDecoration='underline'>
+            Large Donations: Sat., 10 a.m. to 12 noon
+          </Text>
+        </Link>
+        <Link as={ReactLink} to='/aboutus/bookdonations'>
+          <Text fontSize='1rem' color='#7283fe' textDecoration='underline'>
+            Estate Donations: By appointment (call the Library)
           </Text>
         </Link>
         <Divider variant='custom' />
@@ -141,20 +152,8 @@ export default function Home({ name }) {
           Amazon's Smile Program
         </Heading>
         <Text fontSize='1rem'>
-          We are enrolled in the AmazonSmile program, so, for all your Amazon
-          Shopping, please visit:
-          <br />
-        </Text>
-        <Link target='_blank' href='https://smile.amazon.com'>
-          <Text fontSize='1rem' color='#7283fe' textDecoration='underline'>
-            https://smile.amazon.com
-          </Text>
-        </Link>
-        <Text fontSize='1rem'>
-          The first time you use AmazonSmile, you should go to "Your Charity"
-          and designate "Village Library, Inc." as your charity. The Library
-          will receive a credit for everything you buy using this link.
-          <br />
+          The AmazonSmile program ended on February 20, 2023. Thank you for your
+          support over the last ten years.
         </Text>
         <Heading fontSize='1.2rem' fontFamily='Times New Roman' color='#f29085'>
           Buy A Brick Program

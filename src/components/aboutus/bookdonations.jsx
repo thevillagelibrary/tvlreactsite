@@ -12,7 +12,12 @@ export default function BookDonations({ name }) {
         ml='0.5rem'
         alignItems='left'>
         <Text fontSize='1rem'>
-          Hours: Thursday - Saturday from 10 a.m. - 12 p.m.
+          Small Donations (individual or one small bag or box): Wed. - Sat., 10
+          a.m. to 5 p.m.
+          <br />
+          Large Donations: Sat., 10 a.m. to 12 noon
+          <br />
+          Estate Donations: By appointment (call the Library)
         </Text>
         <Text fontSize='1rem'>
           The Village Library accepts donations of current hardback and
