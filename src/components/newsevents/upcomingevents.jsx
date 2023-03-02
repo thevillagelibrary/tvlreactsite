@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { PageBodySideMenu } from '@/components';
-import UpcomingEventsList from '@/components/NewsEvents/UpcomingEventsList';
+import UpcomingEventsList from '@/components/newsevents/upcomingeventslist';
 import fetchGoogleSheets from '@/utils/fetchGoogleSheets';
 import sheetsDataStale from '@/utils/sheetsDataStale';
 import { Spinner } from '@/components';

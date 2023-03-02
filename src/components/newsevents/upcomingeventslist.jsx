@@ -1,5 +1,5 @@
-import { Image, Text } from '@chakra-ui/react';
-import getFutureEvents from '@/utils/getFutureEvents';
+import { Box, Image, Text } from '@chakra-ui/react';
+import { getFutureEvents } from '@/utils';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function UpcomingEventsList() {
@@ -12,7 +12,11 @@ export default function UpcomingEventsList() {
       return (
         <>
           <Image alt={event[3]} height='29rem' src={imgSource} width='22rem' />
-          <Text key={uuidv4()} fontSize='1rem' whiteSpace='pre-wrap'>
+          <Text
+            width='100%'
+            key={uuidv4()}
+            fontSize='1rem'
+            whiteSpace='pre-wrap'>
             <strong>{event[3]}</strong>
             <br />
             <strong>{event[5]}:</strong> {event[2]} - {event[4]}
@@ -21,7 +25,7 @@ export default function UpcomingEventsList() {
       );
     } else {
       return (
-        <Text key={uuidv4()} fontSize='1rem' whiteSpace='pre-wrap'>
+        <Text width='100%' key={uuidv4()} fontSize='1rem' whiteSpace='pre-wrap'>
           <strong>{event[3]}</strong>
           <br />
           <strong>{event[5]}:</strong> {event[2]} -- {event[4]}
@@ -37,7 +41,9 @@ export default function UpcomingEventsList() {
       {futureEventCount > 0 ? (
         <EventDisplay key={uuidv4()} />
       ) : (
-        <Text key={uuidv4()}>There are no upcoming events.</Text>
+        <Text width='100%' key={uuidv4()}>
+          There are no upcoming events.
+        </Text>
       )}
     </>
   );
