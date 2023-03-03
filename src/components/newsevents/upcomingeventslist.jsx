@@ -1,4 +1,4 @@
-import { Box, Image, Text } from '@chakra-ui/react';
+import { Box, Divider, Image, Text } from '@chakra-ui/react';
 import { getFutureEvents } from '@/utils';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -13,23 +13,43 @@ export default function UpcomingEventsList() {
         <>
           <Image alt={event[3]} height='29rem' src={imgSource} width='22rem' />
           <Text
+            color='#F29085'
+            width='100%'
+            key={uuidv4()}
+            fontSize='1.2rem'
+            whiteSpace='pre-wrap'>
+            <strong>{event[3]}</strong>
+          </Text>
+          <Text
             width='100%'
             key={uuidv4()}
             fontSize='1rem'
             whiteSpace='pre-wrap'>
-            <strong>{event[3]}</strong>
-            <br />
-            <strong>{event[5]}:</strong> {event[2]} - {event[4]}
+            <strong>{event[5]}:</strong> {event[2]} -- {event[4]}
           </Text>
+          <Divider variant='custom' />
         </>
       );
     } else {
       return (
-        <Text width='100%' key={uuidv4()} fontSize='1rem' whiteSpace='pre-wrap'>
-          <strong>{event[3]}</strong>
-          <br />
-          <strong>{event[5]}:</strong> {event[2]} -- {event[4]}
-        </Text>
+        <>
+          <Text
+            color='#F29085'
+            width='100%'
+            key={uuidv4()}
+            fontSize='1.2rem'
+            whiteSpace='pre-wrap'>
+            <strong>{event[3]}</strong>
+          </Text>
+          <Text
+            width='100%'
+            key={uuidv4()}
+            fontSize='1rem'
+            whiteSpace='pre-wrap'>
+            <strong>{event[5]}:</strong> {event[2]} -- {event[4]}
+          </Text>
+          <Divider variant='custom' />
+        </>
       );
     }
   });
