@@ -11,7 +11,6 @@ export default function UpcomingEventsList() {
       let imgSource = 'https://drive.google.com/uc?export=view&id=' + event[6];
       return (
         <>
-          <Image alt={event[3]} height='29rem' src={imgSource} width='22rem' />
           <Text
             color='#F29085'
             width='100%'
@@ -20,6 +19,7 @@ export default function UpcomingEventsList() {
             whiteSpace='pre-wrap'>
             <strong>{event[3]}</strong>
           </Text>
+          <Image alt={event[3]} height='29rem' src={imgSource} width='22rem' />
           <Text
             width='100%'
             key={uuidv4()}
